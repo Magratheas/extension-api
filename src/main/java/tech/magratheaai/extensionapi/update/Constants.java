@@ -1,4 +1,4 @@
-package tech.magratheaai.extensionapi.update.object;
+package tech.magratheaai.extensionapi.update;
 
 /**
  * @author NikitaBolshakov

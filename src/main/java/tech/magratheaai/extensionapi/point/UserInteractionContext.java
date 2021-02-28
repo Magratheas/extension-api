@@ -1,5 +1,6 @@
-package tech.magratheaai.extensionapi;
+package tech.magratheaai.extensionapi.point;
 
+import tech.magratheaai.extensionapi.InputDataHolder;
 import tech.magratheaai.extensionapi.update.object.Update;
 
 import java.util.function.Consumer;
@@ -26,7 +27,7 @@ public interface UserInteractionContext {
      * Returns message to user interface(uses in extensions)
      * @return Actually last message
      */
-    ModuleInputContextObject getInput();
+    InputDataHolder getInput();
 
     /**
      * Returns special id of social network, where is income this message
@@ -37,5 +38,5 @@ public interface UserInteractionContext {
     /**
      * @param consumer Provide callback method to user interaction context
      */
-    void setNewMessageCallback(Consumer<ModuleInputContextObject> consumer);
+    void setNewMessageCallback(Consumer<InputDataHolder> consumer);
 }

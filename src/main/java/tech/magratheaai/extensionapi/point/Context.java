@@ -1,4 +1,4 @@
-package tech.magratheaai.extensionapi;
+package tech.magratheaai.extensionapi.point;
 
 import org.pf4j.ExtensionPoint;
 
@@ -7,7 +7,7 @@ import org.pf4j.ExtensionPoint;
  * @author NikitaBolshakov
  * @version 1.0
  */
-public interface MagratheaContext extends ExtensionPoint {
+public interface Context extends ExtensionPoint {
     /**
      * Extension initialization with parameters.
      */

@@ -7,11 +7,11 @@ import java.util.List;
  * @author NikitaBolshakov
  * @version 1.0
  */
-public record ResultsStackTrace(ModuleInputContextObject input,List<ModuleInputContextObject> stacktrace) {
+public record ResultsStackTrace(InputDataHolder input, List<InputDataHolder> stacktrace) {
     /**
      * @return Last element of stack trace
      */
-    public ModuleInputContextObject getLast(){
+    public InputDataHolder getLast(){
         int size = stacktrace().size();
         return stacktrace().get(size - 1);
     }

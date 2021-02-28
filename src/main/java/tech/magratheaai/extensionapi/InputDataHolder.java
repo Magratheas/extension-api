@@ -10,13 +10,13 @@ import java.lang.reflect.InvocationTargetException;
  * @author NikitaBolshakov
  * @version 1.0
  */
-public abstract class ModuleInputContextObject {
-    public <T extends ModuleInputContextObject> T translateTo(Class<? extends ModuleInputContextObject> obj)
+public abstract class InputDataHolder {
+    public <T extends InputDataHolder> T translateTo(Class<? extends InputDataHolder> obj)
     {
         Update u = this.toUpdate();
         try {
-            ModuleInputContextObject a = obj.getDeclaredConstructor().newInstance();
-            ModuleInputContextObject b  = a.fromUpdate(u);
+            InputDataHolder a = obj.getDeclaredConstructor().newInstance();
+            InputDataHolder b  = a.fromUpdate(u);
             return (T) b;
         } catch (InstantiationException | NoSuchMethodException | InvocationTargetException | IllegalAccessException e) {
             e.printStackTrace();
@@ -24,5 +24,5 @@ public abstract class ModuleInputContextObject {
         return null;
     }
     public abstract Update toUpdate();
-    public abstract ModuleInputContextObject fromUpdate(Update update);
+    public abstract InputDataHolder fromUpdate(Update update);
 }

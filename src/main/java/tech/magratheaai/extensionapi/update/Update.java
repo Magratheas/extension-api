@@ -1,4 +1,4 @@
-package tech.magratheaai.extensionapi.update.entity;
+package tech.magratheaai.extensionapi.update;
 
 import java.util.Map;
 

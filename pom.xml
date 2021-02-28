@@ -11,7 +11,7 @@
     <version>0.1-SNAPSHOT</version>
 
     <name>Bot extension api</name>
-    <description>API to interact with bot framework.</description>
+    <description>API for creating custom extensions for bot framework.</description>
     <url>https://github.com/Magratheas/extension-api</url>
 
     <licenses>

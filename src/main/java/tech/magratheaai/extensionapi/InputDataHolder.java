@@ -1,7 +1,5 @@
 package tech.magratheaai.extensionapi;
 
-
-
 import tech.magratheaai.extensionapi.update.object.Update;
 
 import java.lang.reflect.InvocationTargetException;

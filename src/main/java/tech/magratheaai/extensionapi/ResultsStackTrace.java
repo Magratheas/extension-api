@@ -1,5 +1,9 @@
 package tech.magratheaai.extensionapi;
 
+import com.google.common.collect.Lists;
+import lombok.Getter;
+
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -7,12 +11,18 @@ import java.util.List;
  * @author NikitaBolshakov
  * @version 1.0
  */
-public record ResultsStackTrace(InputDataHolder input, List<InputDataHolder> stacktrace) {
-    /**
-     * @return Last element of stack trace
-     */
-    public InputDataHolder getLast(){
-        int size = stacktrace().size();
-        return stacktrace().get(size - 1);
+public class ResultsStackTrace {
+    @Getter
+    private final InputDataHolder input;
+    @Getter
+    private final List<InputDataHolder> stacktrace;
+    public ResultsStackTrace(InputDataHolder input, List<InputDataHolder> stacktrace){
+        this.input      = input;
+        this.stacktrace = Collections.unmodifiableList(stacktrace);
     }
+    public InputDataHolder getLast(){
+        int size = stacktrace.size();
+        return getStacktrace().get(size - 1);
+    }
+
 }

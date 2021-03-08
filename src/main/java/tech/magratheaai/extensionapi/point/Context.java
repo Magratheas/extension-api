@@ -9,9 +9,13 @@ import org.pf4j.ExtensionPoint;
  */
 public interface Context extends ExtensionPoint {
     /**
-     * Extension initialization with parameters.
+     * Context initialization with parameters.
      */
-    default void init(){}
+    void init();
+    /**
+     * Context run.
+     */
+    void run();
     /**
      * @return The created user interaction context.
      */

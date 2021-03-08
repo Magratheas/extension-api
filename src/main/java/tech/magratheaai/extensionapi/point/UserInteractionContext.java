@@ -2,17 +2,13 @@ package tech.magratheaai.extensionapi.point;
 
 import tech.magratheaai.extensionapi.update.object.Update;
 
-import java.io.Serializable;
 import java.util.function.Consumer;
 
 /**
+ * This interface is used for interaction between user and bot server
+ * 
  * @author NikitaBolshakov
  * @version 1.0
- */
-
-
-/**
- * This interface is used for interaction between user and bot server
  */
 public interface UserInteractionContext {
 

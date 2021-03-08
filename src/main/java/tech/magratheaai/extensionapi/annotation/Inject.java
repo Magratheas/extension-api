@@ -7,7 +7,7 @@ import java.lang.annotation.Target;
 
 /**
  * Annotation to inject extension values
- * (temporarily String and primitives only).
+ * (All serializable classes).
  *
  * @author  NikitaBolshakov
  * @version 1.0

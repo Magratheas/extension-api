@@ -1,6 +1,5 @@
 package tech.magratheaai.extensionapi.point;
 
-import tech.magratheaai.extensionapi.InputDataHolder;
 import tech.magratheaai.extensionapi.update.object.Update;
 
 import java.io.Serializable;
@@ -28,7 +27,7 @@ public interface UserInteractionContext extends Serializable {
      * Returns message to user interface(uses in extensions)
      * @return Actually last message
      */
-    InputDataHolder getInput();
+    Update getInput();
 
     /**
      * Returns special id of social network, where is income this message
@@ -39,5 +38,5 @@ public interface UserInteractionContext extends Serializable {
     /**
      * @param consumer Provide callback method to user interaction context
      */
-    void setNewMessageCallback(Consumer<InputDataHolder> consumer);
+    void setNewMessageCallback(Consumer<Update> consumer);
 }

@@ -3,9 +3,9 @@ package tech.magratheaai.extensionapi.update.object;
 import com.google.common.base.Defaults;
 import lombok.Builder;
 import lombok.Singular;
-import tech.magratheaai.extensionapi.InputDataHolder;
 
 
+import java.io.Serializable;
 import java.util.Map;
 import java.util.Objects;
 
@@ -14,7 +14,7 @@ import java.util.Objects;
  * @version 1.0
  */
 @Builder(toBuilder = true)
-public class Update extends InputDataHolder implements tech.magratheaai.extensionapi.update.Update {
+public final class Update implements tech.magratheaai.extensionapi.update.Update {
     @Singular("add")
     private final Map<String, Object> updateInfo;
 
@@ -29,7 +29,7 @@ public class Update extends InputDataHolder implements tech.magratheaai.extensio
     }
 
     @Override
-    public <T> T getObjectByTag(String tag, Class<T> clazz) {
+    public <T extends Serializable> T getObjectByTag(String tag, Class<T> clazz) {
         if(clazz == null) return null;
         Object obj = updateInfo.get(tag);
         boolean b = clazz.isInstance(obj);
@@ -54,15 +54,5 @@ public class Update extends InputDataHolder implements tech.magratheaai.extensio
         return "Update{" +
                 "updateInfo=" + updateInfo +
                 '}';
-    }
-
-    @Override
-    public Update toUpdate() {
-        return this;
-    }
-
-    @Override
-    public InputDataHolder fromUpdate(Update update) {
-        return update;
     }
 }

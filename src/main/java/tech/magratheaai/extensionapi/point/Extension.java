@@ -1,10 +1,9 @@
 package tech.magratheaai.extensionapi.point;
 
 import org.pf4j.ExtensionPoint;
-import tech.magratheaai.extensionapi.InputDataHolder;
 import tech.magratheaai.extensionapi.ResultsStackTrace;
+import tech.magratheaai.extensionapi.update.object.Update;
 
-import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
 
@@ -13,7 +12,7 @@ import java.util.Map;
  * @author NikitaBolshakov
  * @version 1.0
  */
-public interface Extension extends ExtensionPoint, Serializable {
+public interface Extension extends ExtensionPoint{
     /**
      * @param params Contains a list of entries, where the key is the parameter name.
      */
@@ -32,5 +31,5 @@ public interface Extension extends ExtensionPoint, Serializable {
      * @see ResultsStackTrace
      * @return Pushes the result onto the stack if available.
      */
-    InputDataHolder run(ResultsStackTrace results);
+    Update run(ResultsStackTrace results);
 }

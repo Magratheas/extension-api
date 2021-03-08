@@ -1,7 +1,7 @@
 package tech.magratheaai.extensionapi;
 
-import com.google.common.collect.Lists;
 import lombok.Getter;
+import tech.magratheaai.extensionapi.update.object.Update;
 
 import java.io.Serializable;
 import java.util.Collections;
@@ -14,14 +14,14 @@ import java.util.List;
  */
 public class ResultsStackTrace implements Serializable {
     @Getter
-    private final InputDataHolder input;
+    private final Update input;
     @Getter
-    private final List<InputDataHolder> stacktrace;
-    public ResultsStackTrace(InputDataHolder input, List<InputDataHolder> stacktrace){
+    private final List<Update> stacktrace;
+    public ResultsStackTrace(Update input, List<Update> stacktrace){
         this.input      = input;
         this.stacktrace = Collections.unmodifiableList(stacktrace);
     }
-    public InputDataHolder getLast(){
+    public Update getLast(){
         int size = stacktrace.size();
         return getStacktrace().get(size - 1);
     }

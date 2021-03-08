@@ -21,5 +21,5 @@ public interface Update extends Serializable {
      * @param <T>
      * @return
      */
-    <T> T getObjectByTag(String tag, Class<T> clazz);
+    <T extends Serializable> T getObjectByTag(String tag, Class<T> clazz);
 }

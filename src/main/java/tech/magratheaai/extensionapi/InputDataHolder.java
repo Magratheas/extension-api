@@ -2,13 +2,14 @@ package tech.magratheaai.extensionapi;
 
 import tech.magratheaai.extensionapi.update.object.Update;
 
+import java.io.Serializable;
 import java.lang.reflect.InvocationTargetException;
 
 /**
  * @author NikitaBolshakov
  * @version 1.0
  */
-public abstract class InputDataHolder {
+public abstract class InputDataHolder implements Serializable {
     public <T extends InputDataHolder> T translateTo(Class<? extends InputDataHolder> obj)
     {
         Update u = this.toUpdate();

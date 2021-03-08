@@ -1,5 +1,6 @@
 package tech.magratheaai.extensionapi.update;
 
+import java.io.Serializable;
 import java.util.Map;
 
 /**
@@ -8,7 +9,7 @@ import java.util.Map;
  * @author NikitaBolshakov
  * @version 1.0
  */
-public interface Update {
+public interface Update extends Serializable {
     /**
      * @return
      */

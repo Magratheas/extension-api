@@ -3,6 +3,7 @@ package tech.magratheaai.extensionapi.point;
 import tech.magratheaai.extensionapi.InputDataHolder;
 import tech.magratheaai.extensionapi.update.object.Update;
 
+import java.io.Serializable;
 import java.util.function.Consumer;
 
 /**
@@ -14,7 +15,7 @@ import java.util.function.Consumer;
 /**
  * This interface is used for interaction between user and bot server
  */
-public interface UserInteractionContext {
+public interface UserInteractionContext extends Serializable {
 
     /**
      * Sending message to specified user

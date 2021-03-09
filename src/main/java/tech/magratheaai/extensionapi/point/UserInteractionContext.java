@@ -6,7 +6,7 @@ import java.util.function.Consumer;
 
 /**
  * This interface is used for interaction between user and bot server
- * 
+ *
  * @author NikitaBolshakov
  * @version 1.0
  */

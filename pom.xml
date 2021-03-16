@@ -8,7 +8,7 @@
     <groupId>tech.magratheaai</groupId>
     <artifactId>extension-api</artifactId>
     <packaging>jar</packaging>
-    <version>0.1.2</version>
+    <version>0.1.4</version>
 
     <name>Bot extension api</name>
     <description>API for creating custom extensions for bot framework.</description>
@@ -83,7 +83,6 @@
                 <configuration>
                     <source>15</source>
                     <target>15</target>
-                    <compilerArgs>--enable-preview</compilerArgs>
                 </configuration>
             </plugin>
             <plugin>

@@ -14,9 +14,8 @@ import java.util.Map;
  */
 public interface Extension extends ExtensionPoint{
     /**
-     * @param params Contains a list of entries, where the key is the parameter name.
      */
-    default void init(List<Map.Entry<String, String>> params){}
+    default void init(){}
 
     /**
      * @return Allows to push the result onto the stack.

@@ -26,12 +26,12 @@ public class Location implements Serializable {
 
     private final uploadInfo uploadInfo;
 
-    @Builder
+    @AllArgsConstructor
     @Getter
     public class vkInfo implements Serializable{
     }
 
-    @Builder
+    @AllArgsConstructor
     @Getter
     public class telegramInfo implements Serializable{
         private final float horizontalAccuracy;

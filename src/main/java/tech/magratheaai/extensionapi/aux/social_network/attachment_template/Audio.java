@@ -34,7 +34,7 @@ public class Audio implements Serializable {
     private final uploadInfo uploadInfo;
 
     @Getter
-    @Builder
+    @AllArgsConstructor
     public class vkInfo implements Serializable{
         /**
          * Artist name
@@ -63,7 +63,7 @@ public class Audio implements Serializable {
     }
 
     @Getter
-    @Builder
+    @AllArgsConstructor
     private class telegramInfo implements Serializable {
     }
 

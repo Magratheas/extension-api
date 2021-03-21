@@ -25,7 +25,7 @@ public class Video implements Serializable {
 
     private final uploadInfo uploadInfo;
 
-    @Builder
+    @AllArgsConstructor
     @Getter
     public class vkInfo implements Serializable{
 
@@ -110,7 +110,7 @@ public class Video implements Serializable {
         private final Integer reposts;
     }
 
-    @Builder
+    @AllArgsConstructor
     @Getter
     public class telegramInfo implements Serializable{}
 

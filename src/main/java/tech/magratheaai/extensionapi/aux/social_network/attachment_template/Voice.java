@@ -30,7 +30,7 @@ public class Voice implements Serializable {
     private final vkInfo vkInfo;
     private final telegramInfo telegramInfo;
 
-    @Builder
+    @AllArgsConstructor
     @Getter
     public class vkInfo implements Serializable{
         /**
@@ -59,7 +59,7 @@ public class Voice implements Serializable {
 
         private final uploadInfo uploadInfo;
     }
-    @Builder
+    @AllArgsConstructor
     @Getter
     public class telegramInfo implements Serializable{}
 

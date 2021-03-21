@@ -28,7 +28,7 @@ public class Document implements Serializable {
 
     private final uploadInfo uploadInfo;
 
-    @Builder
+    @AllArgsConstructor
     @Getter
     public class vkInfo implements Serializable{
         /**
@@ -87,7 +87,7 @@ public class Document implements Serializable {
         private final List<String> tags;
     }
 
-    @Builder
+    @AllArgsConstructor
     @Getter
     public class telegramInfo implements Serializable{}
 

@@ -23,7 +23,7 @@ public class Photo implements Serializable {
 
     private final uploadInfo uploadInfo;
 
-    @Builder
+    @AllArgsConstructor
     @Getter
     public class vkInfo implements Serializable{
         /**
@@ -98,7 +98,7 @@ public class Photo implements Serializable {
         private final Integer userId;
     }
 
-    @Builder
+    @AllArgsConstructor
     @Getter
     public class telegramInfo implements Serializable{}
 

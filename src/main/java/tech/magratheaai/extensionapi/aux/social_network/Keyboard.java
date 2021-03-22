@@ -28,5 +28,5 @@ public class Keyboard implements Serializable {
      * Array of button rows.
      */
     @Singular(value = "row")
-    private final List<List<Button>> keyboardButtons;
+    private final List<Row> keyboardButtons;
 }

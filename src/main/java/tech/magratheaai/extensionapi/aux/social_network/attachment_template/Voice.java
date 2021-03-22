@@ -31,7 +31,7 @@ public class Voice implements Serializable {
     private final telegramInfo telegramInfo;
 
     @AllArgsConstructor
-    public class vkInfo implements Serializable{
+    public static class vkInfo implements Serializable{
         /**
          * Access key for audio message
          */
@@ -83,10 +83,10 @@ public class Voice implements Serializable {
         }
     }
     @AllArgsConstructor
-    public class telegramInfo implements Serializable{}
+    public static class telegramInfo implements Serializable{}
 
     @AllArgsConstructor
-    public class uploadInfo implements Serializable{
+    public static class uploadInfo implements Serializable{
         private final File file;
 
         public File getFile() {

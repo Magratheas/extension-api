@@ -24,7 +24,7 @@ public class Photo implements Serializable {
     private final uploadInfo uploadInfo;
 
     @AllArgsConstructor
-    public class vkInfo implements Serializable{
+    public static class vkInfo implements Serializable{
         /**
          * Access key for the photo
          */
@@ -158,10 +158,10 @@ public class Photo implements Serializable {
     }
 
     @AllArgsConstructor
-    public class telegramInfo implements Serializable{}
+    public static class telegramInfo implements Serializable{}
 
     @AllArgsConstructor
-    public class uploadInfo implements Serializable{
+    public static class uploadInfo implements Serializable{
         private final File file;
 
         public File getFile() {

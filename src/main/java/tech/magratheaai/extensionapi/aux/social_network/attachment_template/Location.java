@@ -27,19 +27,20 @@ public class Location implements Serializable {
     private final uploadInfo uploadInfo;
 
     @AllArgsConstructor
-    @Getter
     public class vkInfo implements Serializable{
     }
 
     @AllArgsConstructor
-    @Getter
     public class telegramInfo implements Serializable{
         private final float horizontalAccuracy;
     }
 
     @AllArgsConstructor
-    @Getter
     public class uploadInfo implements Serializable{
         private final File file;
+
+        public File getFile() {
+            return file;
+        }
     }
 }

@@ -26,7 +26,6 @@ public class Video implements Serializable {
     private final uploadInfo uploadInfo;
 
     @AllArgsConstructor
-    @Getter
     public class vkInfo implements Serializable{
 
         /**
@@ -108,15 +107,85 @@ public class Video implements Serializable {
         private final Integer likes;
 
         private final Integer reposts;
+
+        public String getAccessKey() {
+            return accessKey;
+        }
+
+        public Integer getAddingDate() {
+            return addingDate;
+        }
+
+        public boolean isPrivate() {
+            return isPrivate;
+        }
+
+        public Integer getComments() {
+            return comments;
+        }
+
+        public Integer getDate() {
+            return date;
+        }
+
+        public String getDescription() {
+            return description;
+        }
+
+        public Integer getDuration() {
+            return duration;
+        }
+
+        public Integer getId() {
+            return id;
+        }
+
+        public Integer getOwnerId() {
+            return ownerId;
+        }
+
+        public Integer getUserId() {
+            return userId;
+        }
+
+        public URI getPlayer() {
+            return player;
+        }
+
+        public Integer getViews() {
+            return views;
+        }
+
+        public Integer getLocalViews() {
+            return localViews;
+        }
+
+        public Integer getBalance() {
+            return balance;
+        }
+
+        public Integer getLiveStartTime() {
+            return liveStartTime;
+        }
+
+        public Integer getLikes() {
+            return likes;
+        }
+
+        public Integer getReposts() {
+            return reposts;
+        }
     }
 
     @AllArgsConstructor
-    @Getter
     public class telegramInfo implements Serializable{}
 
     @AllArgsConstructor
-    @Getter
     public class uploadInfo implements Serializable{
         private final File file;
+
+        public File getFile() {
+            return file;
+        }
     }
 }

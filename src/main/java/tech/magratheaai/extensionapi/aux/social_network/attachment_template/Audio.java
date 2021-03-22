@@ -3,6 +3,7 @@ package tech.magratheaai.extensionapi.aux.social_network.attachment_template;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
+import lombok.experimental.Delegate;
 
 import java.io.File;
 import java.io.Serializable;
@@ -28,12 +29,12 @@ public class Audio implements Serializable {
      */
     private final String title;
 
-    public final vkInfo vkInfo;
-    public final telegramInfo telegramInfo;
+    private final vkInfo vkInfo;
+
+    private final telegramInfo telegramInfo;
 
     private final uploadInfo uploadInfo;
 
-    @Getter
     @AllArgsConstructor
     public class vkInfo implements Serializable{
         /**
@@ -60,16 +61,42 @@ public class Audio implements Serializable {
          * Genre ID
          */
         private final Integer genreId;
+
+        public String getArtist() {
+            return artist;
+        }
+
+        public Integer getId() {
+            return id;
+        }
+
+        public URI getUrl() {
+            return url;
+        }
+
+        public Integer getDate() {
+            return date;
+        }
+
+        public Integer getAlbumId() {
+            return albumId;
+        }
+
+        public Integer getGenreId() {
+            return genreId;
+        }
     }
 
-    @Getter
     @AllArgsConstructor
     private class telegramInfo implements Serializable {
     }
 
     @AllArgsConstructor
-    @Getter
     public class uploadInfo implements Serializable {
         private final File file;
+
+        public File getFile() {
+            return file;
+        }
     }
 }

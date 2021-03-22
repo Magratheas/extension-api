@@ -24,7 +24,6 @@ public class Photo implements Serializable {
     private final uploadInfo uploadInfo;
 
     @AllArgsConstructor
-    @Getter
     public class vkInfo implements Serializable{
         /**
          * Access key for the photo
@@ -96,15 +95,77 @@ public class Photo implements Serializable {
          * ID of the user who have uploaded the photo
          */
         private final Integer userId;
+
+        public String getAccessKey() {
+            return accessKey;
+        }
+
+        public Integer getAlbumId() {
+            return albumId;
+        }
+
+        public Integer getDate() {
+            return date;
+        }
+
+        public Integer getHeight() {
+            return height;
+        }
+
+        public Integer getId() {
+            return id;
+        }
+
+        public List<Image> getImages() {
+            return images;
+        }
+
+        public Float getLat() {
+            return lat;
+        }
+
+        public Float getLng() {
+            return lng;
+        }
+
+        public Integer getOwnerId() {
+            return ownerId;
+        }
+
+        public URI getPhoto256() {
+            return photo256;
+        }
+
+        public boolean isCanComment() {
+            return canComment;
+        }
+
+        public String getPlace() {
+            return place;
+        }
+
+        public Integer getPostId() {
+            return postId;
+        }
+
+        public String getText() {
+            return text;
+        }
+
+        public Integer getUserId() {
+            return userId;
+        }
     }
 
     @AllArgsConstructor
-    @Getter
     public class telegramInfo implements Serializable{}
 
     @AllArgsConstructor
-    @Getter
     public class uploadInfo implements Serializable{
         private final File file;
+
+        public File getFile() {
+            return file;
+        }
     }
 }

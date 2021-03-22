@@ -29,7 +29,6 @@ public class Document implements Serializable {
     private final uploadInfo uploadInfo;
 
     @AllArgsConstructor
-    @Getter
     public class vkInfo implements Serializable{
         /**
          * Document ID
@@ -85,15 +84,57 @@ public class Document implements Serializable {
          * Document tags
          */
         private final List<String> tags;
+
+        public Integer getId() {
+            return id;
+        }
+
+        public Integer getOwnerId() {
+            return ownerId;
+        }
+
+        public String getTitle() {
+            return title;
+        }
+
+        public Integer getSize() {
+            return size;
+        }
+
+        public String getExt() {
+            return ext;
+        }
+
+        public Integer getDate() {
+            return date;
+        }
+
+        public Integer getType() {
+            return type;
+        }
+
+        public boolean isLicensed() {
+            return isLicensed;
+        }
+
+        public String getAccessKey() {
+            return accessKey;
+        }
+
+        public List<String> getTags() {
+            return tags;
+        }
     }
 
     @AllArgsConstructor
-    @Getter
     public class telegramInfo implements Serializable{}
 
     @AllArgsConstructor
-    @Getter
     public class uploadInfo implements Serializable{
         private final File file;
+
+        public File getFile() {
+            return file;
+        }
     }
 }

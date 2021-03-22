@@ -31,7 +31,6 @@ public class Voice implements Serializable {
     private final telegramInfo telegramInfo;
 
     @AllArgsConstructor
-    @Getter
     public class vkInfo implements Serializable{
         /**
          * Access key for audio message
@@ -58,14 +57,40 @@ public class Voice implements Serializable {
         private final List<Integer> waveform;
 
         private final uploadInfo uploadInfo;
+
+        public String getAccessKey() {
+            return accessKey;
+        }
+
+        public Integer getId() {
+            return id;
+        }
+
+        public URI getLinkOgg() {
+            return linkOgg;
+        }
+
+        public Integer getOwnerId() {
+            return ownerId;
+        }
+
+        public List<Integer> getWaveform() {
+            return waveform;
+        }
+
+        public Voice.uploadInfo getUploadInfo() {
+            return uploadInfo;
+        }
     }
     @AllArgsConstructor
-    @Getter
     public class telegramInfo implements Serializable{}
 
     @AllArgsConstructor
-    @Getter
     public class uploadInfo implements Serializable{
         private final File file;
+
+        public File getFile() {
+            return file;
+        }
     }
 }

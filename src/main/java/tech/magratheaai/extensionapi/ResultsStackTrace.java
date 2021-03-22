@@ -1,6 +1,8 @@
 package tech.magratheaai.extensionapi;
 
 import lombok.Getter;
+import tech.magratheaai.extensionapi.aux.social_network.attachment_template.Audio;
+import tech.magratheaai.extensionapi.aux.social_network.attachment_template.Document;
 import tech.magratheaai.extensionapi.update.object.Update;
 
 import java.io.Serializable;

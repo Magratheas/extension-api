@@ -1,8 +1,6 @@
 package tech.magratheaai.extensionapi.aux.social_network.attachment_template;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
+import lombok.*;
 import tech.magratheaai.extensionapi.annotation.Required;
 
 import java.io.File;
@@ -16,6 +14,7 @@ import java.util.List;
  */
 @Builder
 @Getter
+@ToString
 public class Document implements Serializable {
     /**
      * File URL
@@ -29,6 +28,7 @@ public class Document implements Serializable {
     private final uploadInfo uploadInfo;
 
     @AllArgsConstructor
+    @EqualsAndHashCode
     public static class vkInfo implements Serializable{
         /**
          * Document ID
@@ -127,9 +127,11 @@ public class Document implements Serializable {
     }
 
     @AllArgsConstructor
+    @ToString
     public static class telegramInfo implements Serializable{}
 
     @AllArgsConstructor
+    @ToString
     public static class uploadInfo implements Serializable{
         private final File file;
 

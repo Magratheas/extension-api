@@ -1,8 +1,6 @@
 package tech.magratheaai.extensionapi.aux.social_network;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Singular;
+import lombok.*;
 
 import java.io.Serializable;
 import java.util.List;
@@ -13,6 +11,7 @@ import java.util.List;
  */
 @Builder
 @Getter
+@ToString
 public class Keyboard implements Serializable {
     /**
      * Requests clients to hide the keyboard as soon as it's been used.

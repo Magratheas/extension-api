@@ -1,8 +1,6 @@
 package tech.magratheaai.extensionapi.aux.social_network;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
+import lombok.*;
 
 import java.io.Serializable;
 
@@ -13,6 +11,7 @@ import java.io.Serializable;
 @Builder
 @Getter
 @AllArgsConstructor
+@ToString
 public class Button implements Serializable {
     private final String label;
     /**

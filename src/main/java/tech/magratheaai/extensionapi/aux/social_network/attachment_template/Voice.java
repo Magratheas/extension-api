@@ -1,8 +1,6 @@
 package tech.magratheaai.extensionapi.aux.social_network.attachment_template;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
+import lombok.*;
 import tech.magratheaai.extensionapi.annotation.Required;
 
 import java.io.File;
@@ -16,6 +14,8 @@ import java.util.List;
  */
 @Builder
 @Getter
+@EqualsAndHashCode
+@ToString
 public class Voice implements Serializable {
     /**
      * Voice file URL
@@ -31,6 +31,7 @@ public class Voice implements Serializable {
     private final telegramInfo telegramInfo;
 
     @AllArgsConstructor
+    @ToString
     public static class vkInfo implements Serializable{
         /**
          * Access key for audio message
@@ -56,8 +57,6 @@ public class Voice implements Serializable {
         @Required(social_network = "vk")
         private final List<Integer> waveform;
 
-        private final uploadInfo uploadInfo;
-
         public String getAccessKey() {
             return accessKey;
         }
@@ -77,15 +76,13 @@ public class Voice implements Serializable {
         public List<Integer> getWaveform() {
             return waveform;
         }
-
-        public Voice.uploadInfo getUploadInfo() {
-            return uploadInfo;
-        }
     }
     @AllArgsConstructor
+    @ToString
     public static class telegramInfo implements Serializable{}
 
     @AllArgsConstructor
+    @ToString
     public static class uploadInfo implements Serializable{
         private final File file;
 

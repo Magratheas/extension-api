@@ -1,11 +1,8 @@
 package tech.magratheaai.extensionapi.aux.social_network.attachment_template;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
+import lombok.*;
 import tech.magratheaai.extensionapi.annotation.Required;
 
-import java.awt.*;
 import java.io.File;
 import java.io.Serializable;
 import java.net.URI;
@@ -17,6 +14,7 @@ import java.util.List;
  */
 @Builder
 @Getter
+@ToString
 public class Photo implements Serializable {
     private final vkInfo vkInfo;
     private final telegramInfo telegramInfo;
@@ -24,6 +22,7 @@ public class Photo implements Serializable {
     private final uploadInfo uploadInfo;
 
     @AllArgsConstructor
+    @ToString
     public static class vkInfo implements Serializable{
         /**
          * Access key for the photo
@@ -52,7 +51,7 @@ public class Photo implements Serializable {
         @Required(social_network = "vk")
         private final Integer id;
 
-        private final List<Image> images;
+        private final List<URI> images;
 
         /**
          * Latitude
@@ -116,7 +115,7 @@ public class Photo implements Serializable {
             return id;
         }
 
-        public List<Image> getImages() {
+        public List<URI> getImages() {
             return images;
         }
 
@@ -158,9 +157,11 @@ public class Photo implements Serializable {
     }
 
     @AllArgsConstructor
+    @ToString
     public static class telegramInfo implements Serializable{}
 
     @AllArgsConstructor
+    @ToString
     public static class uploadInfo implements Serializable{
         private final File file;
 

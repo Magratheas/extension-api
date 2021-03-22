@@ -25,6 +25,10 @@ public class Keyboard implements Serializable {
     private final boolean selective;
 
     /**
+     * Is keyboard inline?
+     */
+    private final boolean inline;
+    /**
      * Array of button rows.
      */
     @Singular(value = "row")

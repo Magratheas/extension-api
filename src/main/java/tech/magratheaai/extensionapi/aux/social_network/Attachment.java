@@ -2,7 +2,6 @@ package tech.magratheaai.extensionapi.aux.social_network;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import org.w3c.dom.Document;
 import tech.magratheaai.extensionapi.aux.social_network.attachment_template.*;
 
 import java.io.Serializable;

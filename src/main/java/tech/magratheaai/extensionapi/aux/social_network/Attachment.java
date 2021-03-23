@@ -1,9 +1,6 @@
 package tech.magratheaai.extensionapi.aux.social_network;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.EqualsAndHashCode;
-import lombok.ToString;
+import lombok.*;
 import tech.magratheaai.extensionapi.aux.social_network.attachment_template.*;
 
 import java.io.Serializable;
@@ -15,6 +12,7 @@ import java.io.Serializable;
 @Builder
 @AllArgsConstructor
 @ToString
+@Getter
 public class Attachment implements Serializable {
     /**
      * Type of attachment

@@ -5,6 +5,19 @@ package tech.magratheaai.extensionapi.update;
  * @version 1.0
  */
 public class Constants {
+    //Social networks
+    public static class SocialNetwork {
+        public static final String MESSAGE = "message";
+        public static final String ACTION = "action";
+        public static final String NEW_MESSAGE = "new_message";
+        public static final String EDIT_MESSAGE = "edit_message";
+        public static final String REMOVE_MESSAGE = "remove_message";
+        public static final String QUERY = "query";
+        public static final String SEND_MESSAGE_QUERY = "send_message_query";
+        public static final String EDIT_MESSAGE_QUERY = "edit_message_query";
+        public static final String REMOVE_MESSAGE_QUERY = "remove_message_query";
+    }
+
     //Update constants
     public static final String CHAT_ID        = "chat_id";
     public static final String USER_ID        = "user_id";

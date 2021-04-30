@@ -2,6 +2,7 @@ package tech.magratheaai.extensionapi.point;
 
 import tech.magratheaai.extensionapi.update.object.Update;
 
+import java.util.List;
 import java.util.function.Consumer;
 
 /**
@@ -18,6 +19,8 @@ public interface UserInteractionContext {
      * @return If sending is successful will return true
      */
     boolean send(Update m);
+
+    List<Query> getQueryList();
 
     /**
      * Returns message to user interface(uses in extensions)
